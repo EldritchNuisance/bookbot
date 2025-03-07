@@ -12,4 +12,16 @@ def char_count(string):
         else:
             count[char] = 1
     return count
+
+def get_count(item):
+    return item["count"]
  
+def sort_on(char_dict):
+    new_list = []
+    for char, cnt in char_dict.items():  # Loop directly over items for clarity
+        new_list.append({"character": char, "count": cnt})
+    
+    # Use the get_count function for the sorting key
+    new_list.sort(reverse=True, key=get_count) 
+    return new_list
+
