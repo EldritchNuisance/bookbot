@@ -3,9 +3,14 @@ from stats import (
     char_count,
     sort_on
 )
+import sys
+
+if sys.argv[1] != True:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 def main():
-    book_path = "books/frankenstein.txt"
+    book_path = sys.argv[1]#"books/frankenstein.txt"
     contents = get_book_text(book_path)
     count = word_count(contents)
     chars = char_count(contents)
