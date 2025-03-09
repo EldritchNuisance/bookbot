@@ -5,7 +5,9 @@ from stats import (
 )
 import sys
 
-if sys.argv[1] != True:
+try:
+    sys.argv[1]
+except IndexError:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
 
