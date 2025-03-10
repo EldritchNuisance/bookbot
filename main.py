@@ -21,7 +21,7 @@ def main():
 
 def print_report(book_path, count, sorted):
     print("============ BOOKBOT ============")
-    print("Analyzing book found at {book_path}...")
+    print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")
     print(f"Found {count} total words")
     print("--------- Character Count -------")
